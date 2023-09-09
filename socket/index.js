@@ -14,7 +14,7 @@ io.on("connection", (socket) => {
       activeUsers.push({ userId: newUserId, socketId: socket.id });
       console.log("New User Connected", activeUsers);
     }
-    // send all active users to new user
+    // all active users are sent to new user
     io.emit("get-users", activeUsers);
   });
 
